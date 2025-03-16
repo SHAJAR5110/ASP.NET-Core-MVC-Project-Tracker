@@ -1,0 +1,24 @@
+@model List<ProjectTrackerApp.Models.Project>
+
+<h2>Project Tracker</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var project in Model)
+        {
+            <tr>
+                <td>@project.Name</td>
+                <td>@project.Status</td>
+                <td>
+                    <a href="@Url.Action("Details", "Projects", new { id = project.Id })">View Details</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

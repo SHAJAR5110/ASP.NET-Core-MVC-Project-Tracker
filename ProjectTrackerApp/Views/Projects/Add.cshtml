@@ -1,0 +1,22 @@
+@model ProjectTrackerApp.Models.Project
+
+<h2>Add New Project</h2>
+<form asp-action="Add" method="post">
+    <div>
+        <label>Name</label>
+        <input asp-for="Name" required />
+    </div>
+    <div>
+        <label>Description</label>
+        <textarea asp-for="Description" required></textarea>
+    </div>
+    <div>
+        <label>Status</label>
+        <select asp-for="Status">
+            <option>In Progress</option>
+            <option>Completed</option>
+            <option>Pending</option>
+        </select>
+    </div>
+    <button type="submit">Add Project</button>
+</form>

@@ -1,0 +1,6 @@
+@model ProjectTrackerApp.Models.Project
+
+<h2>@Model.Name</h2>
+<p><strong>Description:</strong> @Model.Description</p>
+<p><strong>Status:</strong> @Model.Status</p>
+<a href="@Url.Action("Index", "Projects")">Back to List</a>
